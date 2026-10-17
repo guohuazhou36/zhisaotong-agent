@@ -1,0 +1,5 @@
+external_data_path: data/external/records.csv
+# 建议把密钥放在 .env / Streamlit Secrets 的 GAODE_API_KEY，不要提交真实密钥
+gaodekey: ""
+gaode_base_url: https://restapi.amap.com
+gaode_timeout: 5

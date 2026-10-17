@@ -1,0 +1,43 @@
+collection_name: agent
+persist_directory: chroma_db
+k: 3
+data_path: data
+md5_hex_store: md5.text
+allow_knowledge_file_type: ["txt", "pdf"]
+
+chunk_size: 200
+chunk_overlap: 20
+separators: [
+            # 优先级最高：双换行符（段落分隔）
+            "\n\n",
+            # 单换行符（行分隔）
+            "\n",
+            # 中文句号
+            "。",
+            # 中文感叹号
+            "！",
+            # 中文问号
+            "？",
+            # 英文感叹号
+            "!",
+            # 英文问号
+            "?",
+            # 英文句号
+            ".",
+            # 中文分号
+            "；",
+            # 英文分号
+            ";",
+            # 中文逗号
+            "，",
+            # 英文逗号
+            ",",
+            # 中文冒号
+            "：",
+            # 英文冒号
+            ":",
+            # 空格
+            " ",
+            # 优先级最低：空字符串（强制按字符切分）
+            ""
+        ]

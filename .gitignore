@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+.venv/
+env/
+venv/
+
+# 环境配置与本地密钥（切勿提交）
+.env
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
+
+# 运行日志
+logs/
+
+# 大型模型权重（向量库 chroma_db 体积小，需要随仓库部署）
+*.bin
+*.pt
+*.pth
