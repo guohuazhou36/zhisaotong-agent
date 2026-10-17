@@ -70,7 +70,9 @@ streamlit run app.py
    - Repository：选择本仓库
    - Branch：`main`
    - Main file path：`app.py`
-4. 在 App settings → **Secrets** 填入（TOML）：
+4. 点击 **Advanced settings**：
+   - Python version 选 **3.11**（不要用 3.13/3.14，依赖可能不兼容）
+   - **Secrets** 填入（必须是 TOML，键名不能错）：
 
 ```toml
 DASHSCOPE_API_KEY = "你的DashScope密钥"
@@ -78,6 +80,8 @@ GAODE_API_KEY = "你的高德密钥"
 ```
 
 5. Deploy 成功后，把 `https://xxx.streamlit.app` 链接发给他人即可。
+
+若已部署过但报缺少 `DASHSCOPE_API_KEY`：打开 Manage app → Settings → Secrets，按上面格式保存后 **Reboot**。若 Python 不是 3.11，需删除应用后按 Advanced settings 重新部署。
 
 说明：
 
